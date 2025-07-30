@@ -5,11 +5,11 @@ wait(3)
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "Strix - 7",
+   Name = "Strix-7 U7",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Loading interface...",
    LoadingSubtitle = "Against crashgrabs...",
-   ShowText = "by Overian1", -- for mobile users to unhide rayfield, change if you'd like
+   ShowText = "Seven U7", -- for mobile users to unhide rayfield, change if you'd like
    Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    ToggleUIKeybind = "K", -- The keybind to toggle the UI visibility (string like "K" or Enum.KeyCode)
@@ -60,13 +60,9 @@ local Tab = Window:CreateTab("Cheats", 4483362458) -- Title, Image
 local Section = Tab:CreateSection(" ")
 
 local Button = Tab:CreateButton({
-   Name = "Callback!",
+   Name = "Far!",
    Callback = function()
-   game.StarterGui:SetCore("SendNotification", {
-    Title = "Callback...";
-    Text = "ping!";
-    Icon = "https://www.roblox.com/asset/?id=6646175695";
-    Duration = "2"
-})
+    game:GetService("Players").LocalPlayer:WaitForChild("MainClient")
+    Character.HumanoidRootPart.CFrame = CFrame.new(48067, 197, -359)
    end,
 })
